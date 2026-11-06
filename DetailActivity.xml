@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLight"
+            android:padding="12dp"
+            android:text="Change the month, units or rebate, then tap Update. Tap Delete to remove this bill." />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Month" android:textStyle="bold" />
+        <Spinner android:id="@+id/spMonth" android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="Electricity used (kWh)"
+            android:textStyle="bold" />
+        <EditText android:id="@+id/etUnits" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="number"
+            android:maxLength="4" android:hint="1 - 1000" />
+
+        <TextView android:id="@+id/tvRebate" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:text="Rebate: 0.0%" android:textStyle="bold" />
+        <SeekBar android:id="@+id/sbRebate" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:max="10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorLight"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView android:id="@+id/tvTotal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Total charges: RM 0.00"
+                android:textSize="16sp" />
+            <TextView android:id="@+id/tvFinal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:text="Final cost: RM 0.00" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btnUpdate" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_update" android:drawablePadding="8dp"
+            android:text="Update" android:textColor="@android:color/white" />
+        <Button android:id="@+id/btnDelete" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:backgroundTint="#C62828"
+            android:drawableStart="@drawable/ic_delete" android:drawablePadding="8dp"
+            android:text="Delete" android:textColor="@android:color/white" />
+        <Button android:id="@+id/btnBack" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:backgroundTint="#757575"
+            android:drawableStart="@drawable/ic_back" android:drawablePadding="8dp"
+            android:text="Back" android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
